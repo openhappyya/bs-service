@@ -1,6 +1,6 @@
 package com.zl.bs.mapper;
 
-import com.zl.bs.entity.List;
+import com.zl.bs.entity.MsgList;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author zl
  * @since 2023-04-14
  */
-public interface ListMapper extends BaseMapper<List> {
+public interface MsgListMapper extends BaseMapper<MsgList> {
 
 }

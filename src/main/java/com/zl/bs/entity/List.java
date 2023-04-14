@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * <p>
@@ -12,7 +11,7 @@ import java.util.Date;
  * </p>
  *
  * @author zl
- * @since 2023-04-09
+ * @since 2023-04-14
  */
 @TableName("leave_list")
 public class List implements Serializable {
@@ -22,12 +21,13 @@ public class List implements Serializable {
     private Integer id;
     private String oldStu;
     private String newStu;
-    private Date time;
-    private Integer workHours;
+    private String time;
+    private Double workHours;
     private Byte state;
     private Byte needToApproved;
     private String oldStuId;
     private String newStuId;
+    private Byte stuResponse;
 
     public Integer getId() {
         return id;
@@ -53,19 +53,19 @@ public class List implements Serializable {
         this.newStu = newStu;
     }
 
-    public Date getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    public Integer getWorkHours() {
+    public Double getWorkHours() {
         return workHours;
     }
 
-    public void setWorkHours(Integer workHours) {
+    public void setWorkHours(Double workHours) {
         this.workHours = workHours;
     }
 
@@ -101,6 +101,14 @@ public class List implements Serializable {
         this.newStuId = newStuId;
     }
 
+    public Byte getStuResponse() {
+        return stuResponse;
+    }
+
+    public void setStuResponse(Byte stuResponse) {
+        this.stuResponse = stuResponse;
+    }
+
     @Override
     public String toString() {
         return "List{" +
@@ -113,6 +121,7 @@ public class List implements Serializable {
         ", needToApproved = " + needToApproved +
         ", oldStuId = " + oldStuId +
         ", newStuId = " + newStuId +
+        ", stuResponse = " + stuResponse +
         "}";
     }
 }

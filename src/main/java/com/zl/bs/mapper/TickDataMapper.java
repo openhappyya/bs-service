@@ -1,6 +1,6 @@
 package com.zl.bs.mapper;
 
-import com.zl.bs.entity.List;
+import com.zl.bs.entity.TickData;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author zl
- * @since 2023-04-14
+ * @since 2023-04-13
  */
-public interface ListMapper extends BaseMapper<List> {
+public interface TickDataMapper extends BaseMapper<TickData> {
 
 }

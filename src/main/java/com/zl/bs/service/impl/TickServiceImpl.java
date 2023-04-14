@@ -4,6 +4,7 @@ import com.zl.bs.entity.Tick;
 import com.zl.bs.mapper.TickMapper;
 import com.zl.bs.service.TickService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,4 +18,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TickServiceImpl extends ServiceImpl<TickMapper, Tick> implements TickService {
 
+    @Autowired
+    TickMapper tickMapper;
+
+    @Override
+    public int updateByIdAndDate(Tick tick) {
+        return tickMapper.updateByIdAndDate(tick);
+    }
 }

@@ -1,6 +1,6 @@
 package com.zl.bs.service;
 
-import com.zl.bs.entity.Calculate;
+import com.zl.bs.entity.MsgList;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author zl
  * @since 2023-04-14
  */
-public interface CalculateService extends IService<Calculate> {
+public interface MsglistService extends IService<MsgList> {
 
 }

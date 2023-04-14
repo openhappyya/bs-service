@@ -11,7 +11,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author zl
- * @since 2023-04-08
+ * @since 2023-04-14
  */
 @TableName("work_log")
 public class Log implements Serializable {
@@ -22,6 +22,8 @@ public class Log implements Serializable {
     private String title;
     private String content;
     private String stuName;
+    private String stuId;
+    private String time;
 
     public Integer getId() {
         return id;
@@ -55,6 +57,22 @@ public class Log implements Serializable {
         this.stuName = stuName;
     }
 
+    public String getStuId() {
+        return stuId;
+    }
+
+    public void setStuId(String stuId) {
+        this.stuId = stuId;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
     @Override
     public String toString() {
         return "Log{" +
@@ -62,6 +80,8 @@ public class Log implements Serializable {
         ", title = " + title +
         ", content = " + content +
         ", stuName = " + stuName +
+        ", stuId = " + stuId +
+        ", time = " + time +
         "}";
     }
 }

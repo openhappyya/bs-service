@@ -9,6 +9,10 @@ import com.zl.bs.service.TickService;
 import com.zl.bs.entity.Tick;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * <p>
  *  前端控制器
@@ -55,8 +59,9 @@ public class TickAction {
     }
 
     @PostMapping(value = "/update")
-    public ResponseEntity<Object> update(@RequestBody Tick params) {
-        tickService.updateById(params);
+    public ResponseEntity<Object> update(@RequestBody Tick params) throws ParseException {
+//        tickService.updateById(params);
+        tickService.updateByIdAndDate(params);
         return new ResponseEntity<>("updated successfully", HttpStatus.OK);
     }
 }

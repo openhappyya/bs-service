@@ -1,5 +1,6 @@
 package com.zl.bs.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 
 /**
@@ -10,15 +11,15 @@ import java.io.Serializable;
  * @author zl
  * @since 2023-04-14
  */
-public class Problems implements Serializable {
+@TableName("teacher_msg_list")
+public class MsgList implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private Integer id;
     private String title;
     private String content;
-    private String stuName;
-    private String stuId;
     private String time;
+    private Byte comfirm;
 
     public Integer getId() {
         return id;
@@ -44,22 +45,6 @@ public class Problems implements Serializable {
         this.content = content;
     }
 
-    public String getStuName() {
-        return stuName;
-    }
-
-    public void setStuName(String stuName) {
-        this.stuName = stuName;
-    }
-
-    public String getStuId() {
-        return stuId;
-    }
-
-    public void setStuId(String stuId) {
-        this.stuId = stuId;
-    }
-
     public String getTime() {
         return time;
     }
@@ -68,15 +53,22 @@ public class Problems implements Serializable {
         this.time = time;
     }
 
+    public Byte getComfirm() {
+        return comfirm;
+    }
+
+    public void setComfirm(Byte comfirm) {
+        this.comfirm = comfirm;
+    }
+
     @Override
     public String toString() {
-        return "Problems{" +
+        return "MsgList{" +
         ", id = " + id +
         ", title = " + title +
         ", content = " + content +
-        ", stuName = " + stuName +
-        ", stuId = " + stuId +
         ", time = " + time +
+        ", comfirm = " + comfirm +
         "}";
     }
 }

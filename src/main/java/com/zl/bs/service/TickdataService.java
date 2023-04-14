@@ -1,6 +1,6 @@
 package com.zl.bs.service;
 
-import com.zl.bs.entity.Calculate;
+import com.zl.bs.entity.TickData;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author zl
- * @since 2023-04-14
+ * @since 2023-04-13
  */
-public interface CalculateService extends IService<Calculate> {
+public interface TickdataService extends IService<TickData> {
 
 }

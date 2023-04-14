@@ -1,5 +1,7 @@
 package com.zl.bs.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 
 /**
@@ -8,14 +10,16 @@ import java.io.Serializable;
  * </p>
  *
  * @author zl
- * @since 2023-04-11
+ * @since 2023-04-14
  */
 public class Calculate implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    private String stuName;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
     private String stuId;
-    private Integer workHours;
+    private String stuName;
+    private Object workHours;
     private Integer late;
     private Integer early;
     private String startTime;
@@ -25,12 +29,12 @@ public class Calculate implements Serializable {
     private Byte manuOrAuto;
     private Byte review;
 
-    public String getStuName() {
-        return stuName;
+    public Integer getId() {
+        return id;
     }
 
-    public void setStuName(String stuName) {
-        this.stuName = stuName;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getStuId() {
@@ -41,11 +45,19 @@ public class Calculate implements Serializable {
         this.stuId = stuId;
     }
 
-    public Integer getWorkHours() {
+    public String getStuName() {
+        return stuName;
+    }
+
+    public void setStuName(String stuName) {
+        this.stuName = stuName;
+    }
+
+    public Object getWorkHours() {
         return workHours;
     }
 
-    public void setWorkHours(Integer workHours) {
+    public void setWorkHours(Object workHours) {
         this.workHours = workHours;
     }
 
@@ -116,8 +128,9 @@ public class Calculate implements Serializable {
     @Override
     public String toString() {
         return "Calculate{" +
-        ", stuName = " + stuName +
+        ", id = " + id +
         ", stuId = " + stuId +
+        ", stuName = " + stuName +
         ", workHours = " + workHours +
         ", late = " + late +
         ", early = " + early +
