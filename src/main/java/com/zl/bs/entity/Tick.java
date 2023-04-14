@@ -10,7 +10,7 @@ import java.util.Date;
  * </p>
  *
  * @author zl
- * @since 2023-04-11
+ * @since 2023-04-13
  */
 @TableName("stu_tick")
 public class Tick implements Serializable {
@@ -21,8 +21,9 @@ public class Tick implements Serializable {
     private Integer late;
     private Integer early;
     private Date time;
-    private Integer workHours;
+    private Double workHours;
     private Integer tickTimes;
+    private String timeString;
 
     public String getStuName() {
         return stuName;
@@ -64,11 +65,11 @@ public class Tick implements Serializable {
         this.time = time;
     }
 
-    public Integer getWorkHours() {
+    public Double getWorkHours() {
         return workHours;
     }
 
-    public void setWorkHours(Integer workHours) {
+    public void setWorkHours(Double workHours) {
         this.workHours = workHours;
     }
 
@@ -78,6 +79,14 @@ public class Tick implements Serializable {
 
     public void setTickTimes(Integer tickTimes) {
         this.tickTimes = tickTimes;
+    }
+
+    public String getTimeString() {
+        return timeString;
+    }
+
+    public void setTimeString(String timeString) {
+        this.timeString = timeString;
     }
 
     @Override
@@ -90,6 +99,7 @@ public class Tick implements Serializable {
         ", time = " + time +
         ", workHours = " + workHours +
         ", tickTimes = " + tickTimes +
+        ", timeString = " + timeString +
         "}";
     }
 }
