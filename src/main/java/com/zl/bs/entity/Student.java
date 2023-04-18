@@ -17,7 +17,7 @@ public class Student implements Serializable {
     private String stuName;
     private String stuDepartment;
     private String phoneNumber;
-    private Integer maxWorkHours;
+    private Double maxWorkHours;
 
     public String getStuId() {
         return stuId;
@@ -51,11 +51,11 @@ public class Student implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
-    public Integer getMaxWorkHours() {
+    public Double getMaxWorkHours() {
         return maxWorkHours;
     }
 
-    public void setMaxWorkHours(Integer maxWorkHours) {
+    public void setMaxWorkHours(Double maxWorkHours) {
         this.maxWorkHours = maxWorkHours;
     }
 

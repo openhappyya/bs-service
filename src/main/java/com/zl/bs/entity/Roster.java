@@ -27,7 +27,7 @@ public class Roster implements Serializable {
     private String location;
     @JsonProperty("PeopleNumber")
     private Integer stuNumber;
-    private Object workHours;
+    private Double workHours;
     @JsonProperty("Guid")
     private String guid;
     @JsonProperty("StartTime")
@@ -38,6 +38,12 @@ public class Roster implements Serializable {
     private String endHourTime;
     @JsonProperty("Subject")
     private String subject;
+    @JsonProperty("Stu")
+    private String stu;
+
+    public String getStu(){return stu;}
+
+    public void setStu(String stu){this.stu = stu;}
 
     public Integer getId() {
         return id;
@@ -87,11 +93,11 @@ public class Roster implements Serializable {
         this.stuNumber = stuNumber;
     }
 
-    public Object getWorkHours() {
+    public Double getWorkHours() {
         return workHours;
     }
 
-    public void setWorkHours(Object workHours) {
+    public void setWorkHours(Double workHours) {
         this.workHours = workHours;
     }
 

@@ -8,7 +8,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author zl
- * @since 2023-04-10
+ * @since 2023-04-19
  */
 public class Teacher implements Serializable {
 
@@ -17,6 +17,7 @@ public class Teacher implements Serializable {
     private String teacherPwd;
     private String teacherName;
     private Byte loginState;
+    private Byte rosterComfirm;
 
     public String getTeacherId() {
         return teacherId;
@@ -50,12 +51,22 @@ public class Teacher implements Serializable {
         this.loginState = loginState;
     }
 
+    public Byte getRosterComfirm() {
+        return rosterComfirm;
+    }
+
+    public void setRosterComfirm(Byte rosterComfirm) {
+        this.rosterComfirm = rosterComfirm;
+    }
+
     @Override
     public String toString() {
         return "Teacher{" +
         ", teacherId = " + teacherId +
+        ", teacherPwd = " + teacherPwd +
         ", teacherName = " + teacherName +
         ", loginState = " + loginState +
+        ", rosterComfirm = " + rosterComfirm +
         "}";
     }
 }

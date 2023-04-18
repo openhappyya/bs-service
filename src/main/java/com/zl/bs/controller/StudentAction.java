@@ -34,6 +34,7 @@ public class StudentAction {
             pageSize = 10;
         }
         Page<Student> aPage = studentService.page(new Page<>(current, pageSize));
+        System.out.println(studentService.findAllStu());
         return new ResponseEntity<>(aPage, HttpStatus.OK);
     }
 

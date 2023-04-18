@@ -31,4 +31,9 @@ public class RosterServiceImpl extends ServiceImpl<RosterMapper, Roster> impleme
 //        list.forEach(item -> System.out.println(item.getId()));
         return list;
     }
+
+    @Override
+    public int updateByGuid(Roster roster) {
+        return rosterMapper.updateByGuid(roster);
+    }
 }

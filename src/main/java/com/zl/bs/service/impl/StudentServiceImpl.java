@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -29,5 +31,10 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
     @Override
     public int updateByStuId(Student student) {
         return studentMapper.updateByStuId2(student);
+    }
+
+    @Override
+    public List<Student> findAllStu() {
+        return studentMapper.findAllStu();
     }
 }

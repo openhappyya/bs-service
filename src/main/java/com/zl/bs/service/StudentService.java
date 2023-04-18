@@ -4,6 +4,8 @@ import com.zl.bs.entity.Student;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -18,4 +20,6 @@ public interface StudentService extends IService<Student> {
     boolean deleteByStuId(String stuId);
 
     int updateByStuId(Student student);
+
+    List<Student> findAllStu();
 }

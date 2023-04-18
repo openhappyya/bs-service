@@ -2,11 +2,10 @@ package com.zl.bs.mapper;
 
 import com.zl.bs.entity.Student;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import org.springframework.beans.factory.annotation.Value;
+
+import java.util.List;
 
 /**
  * <p>
@@ -27,5 +26,6 @@ public interface StudentMapper extends BaseMapper<Student> {
 
     int updateBystuId(Student student);
 
-
+    @Select("select stu_id, max_work_hours from student")
+    List<Student> findAllStu();
 }

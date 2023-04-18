@@ -15,4 +15,6 @@ import java.util.List;
  */
 public interface RosterService extends IService<Roster> {
     List<Roster> findAll();
+
+    int updateByGuid(Roster roster);
 }

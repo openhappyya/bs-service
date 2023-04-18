@@ -29,6 +29,7 @@ public class List implements Serializable {
     private String newStuId;
     private Byte stuResponse;
 
+
     public Integer getId() {
         return id;
     }

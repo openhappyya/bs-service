@@ -1,5 +1,7 @@
 package com.zl.bs.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 
@@ -9,17 +11,19 @@ import java.io.Serializable;
  * </p>
  *
  * @author zl
- * @since 2023-04-14
+ * @since 2023-04-19
  */
 @TableName("teacher_msg_list")
 public class MsgList implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
     private String title;
     private String content;
     private String time;
     private Byte comfirm;
+    private String guid;
 
     public Integer getId() {
         return id;
@@ -61,6 +65,14 @@ public class MsgList implements Serializable {
         this.comfirm = comfirm;
     }
 
+    public String getGuid() {
+        return guid;
+    }
+
+    public void setGuid(String guid) {
+        this.guid = guid;
+    }
+
     @Override
     public String toString() {
         return "MsgList{" +
@@ -69,6 +81,7 @@ public class MsgList implements Serializable {
         ", content = " + content +
         ", time = " + time +
         ", comfirm = " + comfirm +
+        ", guid = " + guid +
         "}";
     }
 }

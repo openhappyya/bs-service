@@ -34,6 +34,7 @@ public class RosterAction {
 //            pageSize = 10;
 //        }
 //        Page<Roster> aPage = rosterService.page(new Page<>(current, pageSize));
+        System.out.println(rosterService.findAll());
         return new ResponseEntity(rosterService.findAll(), HttpStatus.OK);
     }
 
@@ -56,7 +57,8 @@ public class RosterAction {
 
     @PostMapping(value = "/update")
     public ResponseEntity<Object> update(@RequestBody Roster params) {
-        rosterService.updateById(params);
+//        rosterService.updateById(params);
+        rosterService.updateByGuid(params);
         return new ResponseEntity<>("updated successfully", HttpStatus.OK);
     }
 }

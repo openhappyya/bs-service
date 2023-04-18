@@ -12,7 +12,7 @@ import org.apache.ibatis.annotations.Update;
  * </p>
  *
  * @author zl
- * @since 2023-04-10
+ * @since 2023-04-19
  */
 @Mapper
 public interface TeacherMapper extends BaseMapper<Teacher> {

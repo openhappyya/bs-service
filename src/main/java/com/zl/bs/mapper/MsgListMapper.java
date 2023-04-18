@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author zl
- * @since 2023-04-14
+ * @since 2023-04-19
  */
 public interface MsgListMapper extends BaseMapper<MsgList> {
 
