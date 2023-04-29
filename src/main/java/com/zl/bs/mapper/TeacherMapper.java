@@ -20,4 +20,7 @@ public interface TeacherMapper extends BaseMapper<Teacher> {
     @Update("update teacher set login_state = #{teacher.loginState} where teacher_id = #{teacher.teacherId}")
     int updateByTeaId(@Param("teacher") Teacher teacher);
 
+    @Update("update teacher set roster_comfirm = #{teacher.rosterComfirm} where teacher_id = #{teacher.teacherId}")
+    int updateComfirmByTeaId(@Param("teacher") Teacher teacher);
+
 }

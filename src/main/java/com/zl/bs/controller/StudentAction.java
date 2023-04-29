@@ -43,6 +43,11 @@ public class StudentAction {
         return new ResponseEntity<>(studentService.getById(id), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/get/{id}")
+    public ResponseEntity<Student> getStuById(@PathVariable("id") String id) {
+        return new ResponseEntity<>(studentService.getStuById(id), HttpStatus.OK);
+    }
+
     @PostMapping(value = "/create")
     public ResponseEntity<Object> create(@RequestBody Student params) {
         studentService.save(params);

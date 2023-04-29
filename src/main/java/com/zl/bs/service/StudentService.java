@@ -22,4 +22,6 @@ public interface StudentService extends IService<Student> {
     int updateByStuId(Student student);
 
     List<Student> findAllStu();
+
+    Student getStuById(String stuId);
 }

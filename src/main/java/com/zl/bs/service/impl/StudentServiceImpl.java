@@ -37,4 +37,9 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
     public List<Student> findAllStu() {
         return studentMapper.findAllStu();
     }
+
+    @Override
+    public Student getStuById(String stuId) {
+        return studentMapper.fingById(stuId);
+    }
 }

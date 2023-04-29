@@ -15,4 +15,6 @@ import org.springframework.stereotype.Service;
 @Service
 public interface TeacherService extends IService<Teacher> {
     int updateByTeaId(Teacher teacher);
+
+    int updateComfirmByTeaId(Teacher teacher);
 }

@@ -15,6 +15,14 @@ public class rosterStu implements Comparable<rosterStu>{
         this.workHours = (Double) 0.0;
     }
 
+    public Double getMaxWorkHours() {
+        return maxWorkHours;
+    }
+
+    public Double getWorkHours() {
+        return workHours;
+    }
+
     public String getId() {
         return id;
     }
@@ -27,6 +35,9 @@ public class rosterStu implements Comparable<rosterStu>{
         workHours += hours;
     }
 
+    public void subWork(Double hours) {
+        workHours -= hours;
+    }
     public void addDuty(dut duty) {
         duties.add(duty);
     }

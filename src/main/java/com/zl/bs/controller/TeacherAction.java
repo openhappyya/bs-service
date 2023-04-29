@@ -61,4 +61,12 @@ public class TeacherAction {
         Page<Teacher> aPage = teacherService.page(new Page<>(1, 10));
         return new ResponseEntity<>(aPage, HttpStatus.OK);
     }
+
+    @PostMapping(value = "/update/comfirm")
+    public ResponseEntity<Object> updateComfirm(@RequestBody Teacher params) {
+//        teacherService.updateById(params);
+        teacherService.updateComfirmByTeaId(params);
+        Page<Teacher> aPage = teacherService.page(new Page<>(1, 10));
+        return new ResponseEntity<>(aPage, HttpStatus.OK);
+    }
 }

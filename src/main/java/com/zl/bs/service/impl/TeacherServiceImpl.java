@@ -26,5 +26,10 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> impl
         return teacherMapper.updateByTeaId(teacher);
     }
 
+    @Override
+    public int updateComfirmByTeaId(Teacher teacher) {
+        return teacherMapper.updateComfirmByTeaId(teacher);
+    }
+
 
 }

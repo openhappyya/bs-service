@@ -28,4 +28,7 @@ public interface StudentMapper extends BaseMapper<Student> {
 
     @Select("select stu_id, max_work_hours from student")
     List<Student> findAllStu();
+
+    @Select("select * from student  where stu_id = #{stuId}")
+    Student fingById(@Param("stuId") String stuId);
 }
